@@ -1,7 +1,7 @@
-class Solution {
+class Solution1 {
 
     public static void main(String[] args) {
-        var solution = new Solution();
+        var solution = new Solution1();
         System.out.println(solution.nextBeautifulNumber(1000));
     }
 
