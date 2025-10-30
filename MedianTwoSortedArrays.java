@@ -9,6 +9,10 @@ class MedianTwoSortedArrays {
     }
 
     // optimized solution without sorting
+    // in this we inistialized two pointer at the beginning of each array and then
+    // compared the element at both the pointers and added smallest element to a
+    // third combined(of length of 1+2) array and then found the median so time
+    // complexity is O(n+m)
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int p1 = 0;
         int p2 = 0;
