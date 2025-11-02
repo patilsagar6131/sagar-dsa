@@ -4,9 +4,7 @@
 // Output: 3
 // Explanation: The answer is "abc", with the length of 3. Note that "bca" and "cab" are also correct answers.
 
-import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Stack;
 
 public class LongestSubstring {
     public static void main(String[] args) {

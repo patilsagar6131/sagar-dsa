@@ -9,7 +9,6 @@
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Hashtable;
 
 class Solution2 {
     public static void main(String[] args) {
