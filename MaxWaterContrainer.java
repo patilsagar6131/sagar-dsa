@@ -26,6 +26,14 @@ public class MaxWaterContrainer {
         return maxwater;
     }
 
+    // in this approach we initially take 2 pointers 1 at left most part of array
+    // and other at right most
+    // we then compare assuiming that most water will be stored between left and
+    // right most pointers ignoring the one in the middle.
+    // calculation is done on basis (width* height = (p2-p1)*
+    // Math.min(height[p2],height[p1])).
+    // if left part is small (height[p2]<height[p1]) then we increase p1 and if
+    // other wise we decrease p2.
     public int solution1(int[] height) {
         int p1 = 0;
         int p2 = height.length - 1;
