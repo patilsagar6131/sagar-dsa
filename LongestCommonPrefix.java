@@ -22,6 +22,7 @@ public class LongestCommonPrefix {
                 }
             }
             p2++;
+
         }
         return strs[0];
     }
