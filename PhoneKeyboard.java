@@ -5,7 +5,32 @@ import java.util.List;
 class PhoneKeyboard{
     public static void main(String[] args) {
         var pk = new PhoneKeyboard() ; 
-        pk.letterCombinations("5678"); 
+       pk.letterCombinations("5555"); 
+        List <String> ans = new ArrayList<>();
+        StringBuilder subset = new StringBuilder();
+        String[] mapping = {"","", "abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"}; 
+        String digits = "5555";
+        System.out.println(pk.solve(ans,0,mapping,digits,subset));
+    }
+
+    //optimized code 
+    private List<String> solve(List<String> ans,int index, String[] mapping, String digits, StringBuilder subset) {
+        
+        if(digits.length()==0){
+            return ans; 
+        }
+        if(index == digits.length()){
+            ans.add(subset.toString());
+            return ans; 
+        }
+        char digit = digits.charAt(index);
+        String values = mapping[digit-'0']; 
+        for(int i=0;i<values.length();i++){
+            subset.append(values.charAt(i)); 
+            solve(ans, index+1, mapping, digits, subset); 
+            subset.deleteCharAt(subset.length()-1);            
+        }
+        return ans;
     }
     public List<String> letterCombinations(String digits) {       
         List<String> ans = new ArrayList<>();
@@ -86,6 +111,7 @@ class PhoneKeyboard{
         }
         return list;
     }
+
 
     
 }
